@@ -44,5 +44,7 @@ export default createGlobalStyle`
     --hightext: 24px;
     --mediumtext: 18px;
     --lowtext: 14px;
+    --highlowtext: 12px;
+    --icontext: 11px;
   }
 `;

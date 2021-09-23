@@ -1,14 +1,27 @@
 import React from "react";
-import { Container } from "./styles";
+import { ButtonSend, Container, Content, SectionLogo, IconTube, SectionSearch, Input, RowButton} from "./styles";
 
+import { ListVideosSearch } from '../listVideosSearch/index'
 interface Props {
     toggleTheme(): void;
 }
 
-export const HomePage = ({toggleTheme}: Props) => {
+export const HomePage = ({ toggleTheme }: Props) => {
     return (
-        <Container >
-            <h1>Hello, World!</h1>
+        <Container>
+            <Content>
+                <SectionLogo>
+                    <IconTube />
+                    <h1>MadeIn<strong>WebTube</strong>.</h1>
+                </SectionLogo>
+                <SectionSearch>
+                    <Input type="text" placeholder="SearchVideo" />
+                    <RowButton>
+                        <ButtonSend />
+                    </RowButton>
+                </SectionSearch>
+                <ListVideosSearch />
+            </Content>
         </Container>
     )
 }
