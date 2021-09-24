@@ -3002,6 +3002,11 @@ axios@^0.21.4:
   dependencies:
     follow-redirects "^1.14.0"
 
+axios@^0.7.0:
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-0.7.0.tgz#489c269044d5066dfa2c64c749cb131b176f4a7a"
+  integrity sha1-SJwmkETVBm36LGTHScsTGxdvSno=
+
 axobject-query@^2.2.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/axobject-query/-/axobject-query-2.2.0.tgz#943d47e10c0b704aa42275e20edf3722648989be"
@@ -12152,3 +12157,10 @@ yocto-queue@^0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/yocto-queue/-/yocto-queue-0.1.0.tgz#0294eb3dee05028d31ee1a5fa2c556a6aaf10a1b"
   integrity sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==
+
+youtube-search-api-with-axios@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/youtube-search-api-with-axios/-/youtube-search-api-with-axios-2.0.0.tgz#d2097d79939331dd5661d55b2722d0cd8a34a13c"
+  integrity sha1-0gl9eZOTMd1WYdVbJyLQzYo0oTw=
+  dependencies:
+    axios "^0.7.0"

@@ -23,6 +23,7 @@ export default createGlobalStyle`
     
     html {
       background: ${props => props.theme.colors.background};
+      height: 100%;
       
  
     }

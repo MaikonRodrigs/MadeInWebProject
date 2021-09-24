@@ -6,20 +6,18 @@ import { Search } from "@styled-icons/ionicons-sharp/Search";
 export const Container = styled.div`
   padding: 10px;
   display: flex;
-
+  height: 100%;
   background: ${(props) => props.theme.colors.primary};
-
-  height: 100vh;
 `;
 
 export const Content = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-
+  flex-direction: column;   
   margin: 0 auto;
 `;
+
 export const SectionLogo = styled.div`
   display: flex;
   flex-direction: row;
@@ -47,7 +45,6 @@ export const IconTube = styled(Playcanvas)`
 export const SectionSearch = styled.div`
   display: flex;
   margin-top: 20px;
-
   flex-direction: row;
   justify-content: space-between;
   align-items: center;

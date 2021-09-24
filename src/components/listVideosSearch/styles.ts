@@ -4,26 +4,47 @@ import { ViewShow } from "@styled-icons/zondicons/ViewShow";
 
 export const Container = styled.div`
   display: flex;
-  max-width: 720px;
-
+  flex-direction: row;
   margin-top: 40px;
+
+  @media (m-width: 768px) {
+
+  }
+
+`;
+
+export const Results = styled.div`
+  p {
+    color: ${(props) => props.theme.colors.text_secondary};
+    font-size: var(--lowtext);
+  }
 `;
 
 export const SectionListVideos = styled.div`
   display: flex;
+  flex-direction: column;
 
   width: 450px;
-  border: 1px solid red;
 
-  @media (min-width: 720px) {
-    width: 650px;
+  @media (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 820px;
   }
 `;
 
 export const RowSearch = styled.div`
   display: flex;
-
   justify-content: space-between;
+
+  border: 1px solid var(--white);
+  padding: 10px;
+  margin: 10px 0;
+
+  @media (min-width: 768px) {
+  }
 `;
 
 export const Thumb = styled.div`
@@ -35,7 +56,7 @@ export const Thumb = styled.div`
   display: flex;
   flex-shrink: 0;
 
-  @media (min-width: 720px) {
+  @media (min-width: 768px) {
     width: 250px;
     height: 250px;
   }
@@ -46,9 +67,9 @@ export const ColumnVideo = styled.div`
 `;
 
 export const TitleVideo = styled.div`
-  width: 320px;
+  width: 300px;
 
-  @media (min-width: 720px) {
+  @media (min-width: 768px) {
     width: 650px;
   }
   h1 {
@@ -78,10 +99,10 @@ export const ChannelName = styled.div`
 `;
 
 export const DescriptionVideo = styled.div`
-  width: 320px;
+  width: 300px;
   margin-top: 10px;
 
-  @media (min-width: 720px) {
+  @media (min-width: 768px) {
     width: 650px;
   }
 
@@ -102,7 +123,6 @@ export const ViewsVideo = styled.div`
   flex-direction: row;
   align-items: center;
   margin-top: 12px;
-
 
   p {
     color: ${(props) => props.theme.colors.text_secondary};
@@ -129,6 +149,11 @@ export const CopyEmbed = styled.div`
     font-size: var(--icontext);
     color: ${(props) => props.theme.colors.text_secondary};
     cursor: pointer;
+  }
+
+  > a {
+    text-decoration: none;
+    text-transform: none;
   }
 `;
 export const IconEmbed = styled.div``;
