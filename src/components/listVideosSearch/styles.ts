@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 import { ViewShow } from "@styled-icons/zondicons/ViewShow";
 
-export const Container = styled.div`
+export const ContainerListVideos = styled.div`
   display: flex;
   flex-direction: row;
   margin-top: 40px;
@@ -24,7 +24,7 @@ export const SectionListVideos = styled.div`
   display: flex;
   flex-direction: column;
 
-  width: 450px;
+  width: 450px; 
 
   @media (min-width: 768px) {
     display: flex;
@@ -55,6 +55,12 @@ export const Thumb = styled.div`
 
   display: flex;
   flex-shrink: 0;
+
+  img {
+    width: 140px;
+    height: 140px;
+    
+  }
 
   @media (min-width: 768px) {
     width: 250px;
