@@ -1,4 +1,4 @@
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 
 import { Playcanvas } from "@styled-icons/simple-icons/Playcanvas";
 import { Search } from "@styled-icons/ionicons-sharp/Search";
@@ -8,7 +8,6 @@ import { CloseCircle } from "@styled-icons/ionicons-solid/CloseCircle";
 import {
   Rotate,
   appearFromTop,
-  appearFromBottom,
 } from "../../utils/animations";
 
 export const Container = styled.div`

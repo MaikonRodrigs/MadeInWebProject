@@ -3,11 +3,11 @@ import React, { useState } from "react";
 import { api } from "../../services/api";
 
 import ResultsSearch from '../ResultsSearch/'
+
 import { Animation, Container, SectionLogo, IconTube, FormSearch, ButtonSend, ResetSearch, Results, ShowResults } from './style';
 
-
 const HomePage = ({ enterTextSearch }) => {
-  const API_KEY = "AIzaSyBCPyu77nYp314vjiyweIGRZF9UAKEb53A";
+  const API_KEY = `${process.env.REACT_APP_API_KEY_YT}`
   const [search, setSearch] = useState('');
   const [date, setDate] = useState([]);
 
@@ -65,9 +65,9 @@ const HomePage = ({ enterTextSearch }) => {
         {
           date.map(function (d, idx) {
             return (
-              <div key={d.id.video}>
+              <div key={d.id.videoId}>
                 <ResultsSearch
-                  url={d.id.video}
+                  url={d.id.videoId}
                   title={d.snippet.title}
                   channel={d.snippet.channelTitle}
                   thumbnail={d.snippet.thumbnails.medium.url}

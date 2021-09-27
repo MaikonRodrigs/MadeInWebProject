@@ -111,14 +111,29 @@ export const RelatedVideos = styled.div`
 `;
 
 export const LeftColumn = styled.div`
-  width: 90%;
+  width: 99%;
 
   @media (min-width: 1280px) {
     width: 70%;
-
   }
 `;
 export const RightColumn = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: 560px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+  }
+
+  @media (min-width: 1280px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   @media (min-width: 1280) {
     width: 30%;
   }
@@ -133,5 +148,4 @@ export const RightColumn = styled.div`
       text-align: left;
     }
   }
-
 `;

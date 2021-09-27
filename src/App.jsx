@@ -14,34 +14,32 @@ import { ThemeProvider } from "styled-components";
 
 function App() {
   const [theme, setTheme] = useState(dark);
+  // eslint-disable-next-line
   const [searchText, setSearchText] = useState('');
-  const [id, setId] = useState('')
-  const API_KEY = process.env.REACT_APP_WEATHER_API_KEY;
-  console.log('API => '+API_KEY)
 
   const toggleTheme = () => {
     setTheme(theme.title === "light" ? dark : light);
   };
-
+  
   const enterTextSearch = (value) => {
     setSearchText(value);
   };
 
   return (
-
+    
     <ThemeProvider theme={theme}>
       <BrowserRouter>
         <Header toggleTheme={toggleTheme} />
         <Switch>
           <Route exact path="/" render={(Props) => <HomePage enterTextSearch={enterTextSearch} />} />
           <Route exact path="/results" conponent={ResultsSearch} />
-          <Route exact path="/video" render={(Props) => <VideoEmbed setId={setId}/> } />
+          <Route path="/video" component={VideoEmbed} />
         </Switch>
         <GlobalStyle />
       </BrowserRouter>
     </ThemeProvider>
 
-  );
+);
 }
 
 export default App;

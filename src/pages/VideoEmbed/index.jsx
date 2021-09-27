@@ -18,27 +18,22 @@ import {
 import { api } from '../../services/api'
 
 const VideoEmbed = () => {
-  const API_KEY = "AIzaSyBCPyu77nYp314vjiyweIGRZF9UAKEb53A";
+  const API_KEY =`${process.env.REACT_APP_API_KEY_YT}`
   const [video, setVideo] = useState([]);
-  const [date, setDate] = useState([]);
 
-  const [textSearch, setTextSearch] = useState([]);
-  const [search, setSearch] = useState('');
-
+  const IdKeyVideo = 'Orkut'
 
   useEffect(() => {
     api
       .get(`videos?id=EhnXaybirdA&part=snippet,statistics&key=${API_KEY}`)
       .then((res) => setVideo(res.data.items));
-
     if (!video) {
       return (
         <div></div>
       )
     }
-
+// eslint-disable-next-line
   }, [])
-
 
   const videoSrc = `https://www.youtube.com/embed/EhnXaybirdA`;
 
@@ -46,7 +41,7 @@ const VideoEmbed = () => {
     <>
       {video.map(function (d, idx) {
         return (
-          <Container key={d.id}>
+          <Container key={d.id.videoId}>
             <LeftColumn>
               <Content>
                 <Thumbnail>
@@ -73,8 +68,7 @@ const VideoEmbed = () => {
               </Description>
             </LeftColumn>
             <RightColumn>
-              <h1>Videos Relacionados</h1>
-              {/* <RelatedVideos /> */}
+              <RelatedVideos IdKeyVideo={IdKeyVideo}/>
             </RightColumn>
           </Container>
         )

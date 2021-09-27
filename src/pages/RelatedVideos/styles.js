@@ -2,16 +2,25 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   display: flex;
-  width: 100%;
+
+  @media (min-width: 720px) {
+    display: flex;
+    flex-direction: column;
+  }
 `;
+
 export const Content = styled.div`
-  padding: 13px 20px;
+  padding: 18px;
   justify-content: center;
-  img {
+  
+  @media (min-width: 720px) {
+    display: flex;
     width: 100%;
   }
-  h1 {
-    color: ${(props) => props.theme.colors.primary};
-    padding: 20px;
+
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
   }
 `;
