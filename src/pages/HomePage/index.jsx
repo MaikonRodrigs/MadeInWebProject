@@ -29,8 +29,12 @@ const HomePage = ({ enterTextSearch }) => {
     event.preventDefault();
     enterTextSearch(search);
 
+    if (search === '') {
+      return;
+    }
+
     YoutubeApi
-      .get(`search?part=id,snippet&q=${search}&maxResults=2&&key=${API_KEY}`)
+      .get(`search?part=id,snippet&q=${search}&maxResults=9&&key=${API_KEY}`)
       .then((res) => setData(res.data.items));
     if (!search) {
       return (
@@ -39,6 +43,7 @@ const HomePage = ({ enterTextSearch }) => {
     }
 
   }
+
   const handleChange = (e) => {
     setSearch(e.target.value);
   }
@@ -52,6 +57,12 @@ const HomePage = ({ enterTextSearch }) => {
       <>
         <IconLoading />
       </>
+    )
+  }
+
+  if (data === '') {
+    return(
+      <h1>ENVIADO</h1>
     )
   }
 

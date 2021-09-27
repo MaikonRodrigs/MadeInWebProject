@@ -1,23 +1,22 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-import { Playcanvas } from "@styled-icons/simple-icons/Playcanvas";
-import { Search } from "@styled-icons/ionicons-sharp/Search";
-import { Spinner3 } from "@styled-icons/evil/Spinner3";
-import { CloseCircle } from "@styled-icons/ionicons-solid/CloseCircle";
+import { Playcanvas } from '@styled-icons/simple-icons/Playcanvas';
+import { Search } from '@styled-icons/ionicons-sharp/Search';
+import { Spinner3 } from '@styled-icons/evil/Spinner3';
+import { CloseCircle } from '@styled-icons/ionicons-solid/CloseCircle';
 import {
   Rotate,
   appearFromTop,
 } from "../../utils/animations";
 
 export const Container = styled.div`
-  background: ${(props) => props.theme.colors.secondary};
-  padding: 20px;
-  height: calc(100vh - (-55px));
-
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  background: ${(props) => props.theme.colors.secondary};
+  padding: 20px;
+  height: 100vh;
   overflow: hidden;
 
   &.expandedSearch {

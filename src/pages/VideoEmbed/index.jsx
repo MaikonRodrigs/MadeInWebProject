@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { YoutubeApi } from '../../services/YoutubeApi'
-import { useParams } from 'react-router-dom'
+import { useParams, useHistory } from 'react-router-dom'
 import RelatedVideos from '../RelatedVideos'
+
 import {
   Container,
   Content,
@@ -13,13 +14,21 @@ import {
   IconLiked,
   IconsView,
   LeftColumn,
-  RightColumn
+  RightColumn,
+  BackSearch,
+  IconHome,
+  Column
 } from './styles';
 
 const VideoEmbed = () => {
   const API_KEY = `${process.env.REACT_APP_API_KEY_YT}`
   const [video, setVideo] = useState([]);
   const { videoId } = useParams()
+  let history = useHistory()
+
+  const HandleHome = () => {
+    history.push('/', '_self')
+  }
 
   useEffect(() => {
     YoutubeApi
@@ -38,15 +47,23 @@ const VideoEmbed = () => {
   }, [])
 
   const videoSrc = `https://www.youtube.com/embed/${videoId}`;
-  if(!video.id) {
-    return(
+  if (!video.id) {
+    return (
       <div></div>
     )
   }
   return (
+    <>
+
       <Container key={video.id.videoId}>
         <LeftColumn>
           <Content>
+            <BackSearch >
+              <Column onClick={HandleHome}>
+                <IconHome />
+                <h1>Voltar</h1>
+              </Column>
+            </BackSearch>
             <Thumbnail>
               <iframe src={videoSrc} allowFullScreen title="Video player" />
             </Thumbnail>
@@ -71,9 +88,11 @@ const VideoEmbed = () => {
           </Description>
         </LeftColumn>
         <RightColumn>
+          <h1>Assista tambem:</h1>
           <RelatedVideos IdKeyVideo={video.snippet.title} />
         </RightColumn>
       </Container>
+    </>
   )
 }
 

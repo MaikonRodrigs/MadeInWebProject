@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { Like } from "@styled-icons/evil/Like";
 import { ViewShow } from "@styled-icons/zondicons/ViewShow";
+import { Search } from "@styled-icons/ionicons-sharp/Search";
 
 export const Container = styled.div`
   height: 100vh;
@@ -146,11 +147,47 @@ export const RightColumn = styled.div`
   h1 {
     font-size: var(--hightext);
     color: ${(props) => props.theme.colors.primary};
-    padding: 10px 20px;
-    text-align: center;
+    text-align: left;
+    margin-top: 10px;
 
     @media (min-width: 720px) {
       text-align: left;
     }
   }
+`;
+
+export const BackSearch = styled.div`
+  display: flex;  
+  align-items: flex-start;
+  align-self: flex-start;
+  margin: 10px 8px 0;
+  `;
+
+export const Column = styled.div`
+  display: flex; 
+  background: ${(props) => props.theme.colors.secondary};
+  border: 1px solid ${(props) => props.theme.colors.text};
+  cursor: pointer;
+  padding: 10px 20px;
+  border: 1px solid ${(props) => props.theme.colors.secondary};
+  border-radius: 40px;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  h1 {
+    color: ${(props) => props.theme.colors.text};
+    font-size: var(--lowtext);
+    margin-right: 4px;
+    > a {
+      text-decoration: none;
+    }
+  }
+`;
+export const IconHome = styled(Search)`
+  width: 15px;
+  height: 15px;
+  fill: ${(props) => props.theme.colors.text};
+  margin-right: 10px;
 `;
