@@ -1,29 +1,16 @@
+👋 Hi, I’m @MaikonRodrigs, hosted this project through Firebase, take a look:
+https://madeinwebtube.web.app/
+
+SpecsProject
 # Getting Started with Create React App
-## @TypeScript
+This project [Create React App] @TypeScript
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
+Init Project Local
 ### `yarn start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-### `yarn eject`
-
 ### Libs Used
-# Styled Components
-# Styled Icons
-# Firebase
-# Axios
+Styled Components
+Styled Icons
+Firebase
+Axios
+React-router-dom
