@@ -2,13 +2,12 @@ import React, { useState } from "react";
 
 import { api } from "../../services/api";
 
-
 import ResultsSearch from '../ResultsSearch/'
 import { Animation, Container, SectionLogo, IconTube, FormSearch, ButtonSend, ResetSearch, Results, ShowResults } from './style';
 
 
 const HomePage = ({ enterTextSearch }) => {
-  const API_KEY = "AIzaSyCpL2ABAjhqorhzGwibc4ESnmt618iwdmo";
+  const API_KEY = "AIzaSyBCPyu77nYp314vjiyweIGRZF9UAKEb53A";
   const [search, setSearch] = useState('');
   const [date, setDate] = useState([]);
 
@@ -68,6 +67,7 @@ const HomePage = ({ enterTextSearch }) => {
             return (
               <div key={d.id.video}>
                 <ResultsSearch
+                  url={d.id.video}
                   title={d.snippet.title}
                   channel={d.snippet.channelTitle}
                   thumbnail={d.snippet.thumbnails.medium.url}

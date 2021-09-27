@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 
 import { Animation, Container, Content, Thubmnail, RowText, ChannelName, Description } from './style';
@@ -6,10 +6,19 @@ import { Animation, Container, Content, Thubmnail, RowText, ChannelName, Descrip
 const ResultsSearch = (props) => {
   const { thumbnail, title, description, channel, url } = props
 
+
+  const [video, setVideo] = useState('');
+
+  const HandleClickVideo = (url) => {
+    
+    window.open(url)?.focus()
+
+   }
+
   return (
     <Container>
       <Animation>
-        <Content onClick={url}>
+        <Content onClick={HandleClickVideo}>
           <Thubmnail>
             <img src={thumbnail} alt="" />
           </Thubmnail>
