@@ -3,11 +3,11 @@ export default {
     title: 'dark',
 
     colors: {
-        primary: '#1A1A1A',
-        secondary: '#5F5F5F',
-        text: '#fff',
+        primary: 'var(--dark_primary)',
+        secondary: 'var(--dark_secondary)',
+        text: 'var(--dark_text)',
         text_secondary: 'var(--white)',
 
-        background: '#5F5F5F' 
+        background: 'var(--gray)'
     },
 };

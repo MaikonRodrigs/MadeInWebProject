@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from "styled-components";
 
 export default createGlobalStyle`
   *{
@@ -9,34 +9,37 @@ export default createGlobalStyle`
 
     html, border-style, #root {
         max-height: 100vh;
-        max-width: 100%;
-
-        width: 100%;
-        height: 100%;
     }
 
     *, button, input {
         border: 0;
         background: none;
         font-family: 'Blinker', sans-serif;
+
     }
     
     html {
-      background: ${props => props.theme.colors.background};
-      height: 100%;
-      
- 
+      background: ${(props) => props.theme.colors.background};
     }
+    
+    ul {
+    list-style: none;
+  }
 
     :root {
-    --primary: #A34AB1;
-    --secondary: #C4C4C4;
-    --third: #DEBEE3;
-
-    --white: #ffffff;
+    --white: #e5e5e5;
     --black: #1A1A1A;
     --gray: #7A7A7A;
 
+    --light_primary: #084b83;
+    --light_secondary: #cfd6ea;
+    --light_text: #1A1A1A;
+    --light_text_secondary: #347fc4;
+
+    --dark_primary: #1A1A1A;
+    --dark_secondary: #424342;
+    --dark_text: #ececec;
+    --dark_text_secondary: #fff;
 
     --hightitle: 90px;
     --mediumtitle: 60px;
