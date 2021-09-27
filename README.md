@@ -4,6 +4,8 @@ https://madeinwebtube.web.app/
 This project [Create React App] `@TypeScript` <br>
 First run `yarn` next `yarn start`, and **enjoy** 💥
 
+**REMEMBER:**
+`SET_YOUR_ID_KEY_YOUTUBE`.env
 
 ### Libs
 - [x] Styled Components <br>
