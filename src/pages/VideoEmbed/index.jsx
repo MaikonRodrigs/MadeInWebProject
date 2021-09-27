@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
+import { YoutubeApi } from '../../services/YoutubeApi'
+import { useParams } from 'react-router-dom'
 import RelatedVideos from '../RelatedVideos'
-
 import {
   Container,
   Content,
@@ -15,66 +16,64 @@ import {
   RightColumn
 } from './styles';
 
-import { api } from '../../services/api'
-
 const VideoEmbed = () => {
-  const API_KEY =`${process.env.REACT_APP_API_KEY_YT}`
+  const API_KEY = `${process.env.REACT_APP_API_KEY_YT}`
   const [video, setVideo] = useState([]);
-
-  const IdKeyVideo = 'Orkut'
+  const { videoId } = useParams()
 
   useEffect(() => {
-    api
-      .get(`videos?id=EhnXaybirdA&part=snippet,statistics&key=${API_KEY}`)
-      .then((res) => setVideo(res.data.items));
+    YoutubeApi
+      .get(`videos?id=${videoId}&part=snippet,statistics&key=${API_KEY}`)
+      .then((res) => {
+        setVideo(res.data.items[0])
+        console.log(res)
+      });
+
     if (!video) {
       return (
         <div></div>
       )
     }
-// eslint-disable-next-line
+    // eslint-disable-next-line
   }, [])
 
-  const videoSrc = `https://www.youtube.com/embed/EhnXaybirdA`;
-
+  const videoSrc = `https://www.youtube.com/embed/${videoId}`;
+  if(!video.id) {
+    return(
+      <div></div>
+    )
+  }
   return (
-    <>
-      {video.map(function (d, idx) {
-        return (
-          <Container key={d.id.videoId}>
-            <LeftColumn>
-              <Content>
-                <Thumbnail>
-                  <iframe src={videoSrc} allowFullScreen title="Video player" />
-                </Thumbnail>
-                <Statics>
-                  <Views>
-                    <IconsView />
-                    <p>
-                      {d.statistics.likeCount}
-                    </p>
-                  </Views>
-                  <Likeds>
-                    <IconLiked />
-                    <p>
-                      {d.statistics.viewCount}
-                    </p>
-                  </Likeds>
-                </Statics>
-              </Content>
-              <Description>
-                <h1>{d.snippet.title}</h1>
-                <p>{d.snippet.description}</p>
-              </Description>
-            </LeftColumn>
-            <RightColumn>
-              <RelatedVideos IdKeyVideo={IdKeyVideo}/>
-            </RightColumn>
-          </Container>
-        )
-      }
-      )}
-    </>
+      <Container key={video.id.videoId}>
+        <LeftColumn>
+          <Content>
+            <Thumbnail>
+              <iframe src={videoSrc} allowFullScreen title="Video player" />
+            </Thumbnail>
+            <Statics>
+              <Views>
+                <IconsView />
+                <p>
+                  {video.statistics.likeCount}
+                </p>
+              </Views>
+              <Likeds>
+                <IconLiked />
+                <p>
+                  {video.statistics.viewCount}
+                </p>
+              </Likeds>
+            </Statics>
+          </Content>
+          <Description>
+            <h1>{video.snippet.title}</h1>
+            <p>{video.snippet.description}</p>
+          </Description>
+        </LeftColumn>
+        <RightColumn>
+          <RelatedVideos IdKeyVideo={video.snippet.title} />
+        </RightColumn>
+      </Container>
   )
 }
 

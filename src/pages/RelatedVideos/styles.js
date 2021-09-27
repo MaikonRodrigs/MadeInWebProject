@@ -12,6 +12,11 @@ export const Container = styled.div`
 export const Content = styled.div`
   padding: 18px;
   justify-content: center;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
   
   @media (min-width: 720px) {
     display: flex;

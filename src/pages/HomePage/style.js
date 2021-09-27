@@ -4,7 +4,6 @@ import { Playcanvas } from "@styled-icons/simple-icons/Playcanvas";
 import { Search } from "@styled-icons/ionicons-sharp/Search";
 import { Spinner3 } from "@styled-icons/evil/Spinner3";
 import { CloseCircle } from "@styled-icons/ionicons-solid/CloseCircle";
-
 import {
   Rotate,
   appearFromTop,
@@ -13,7 +12,7 @@ import {
 export const Container = styled.div`
   background: ${(props) => props.theme.colors.secondary};
   padding: 20px;
-  height: 100vh;
+  height: calc(100vh - (-55px));
 
   display: flex;
   justify-content: center;
@@ -56,7 +55,6 @@ export const ShowResults = styled.div`
     padding: 0px;
     margin: 0 auto;
   }
-
 `;
 
 export const Animation = styled.div`
@@ -155,11 +153,9 @@ export const ResetSearch = styled(CloseCircle)`
   }
 `;
 
-export const Spinner = styled.div``;
-
 export const IconLoading = styled(Spinner3)`
   width: 45px;
   height: 45px;
-  fill: ${(props) => props.theme.colors.primary};
+  fill: red;
   animation: ${Rotate} 2s linear infinite;
 `;

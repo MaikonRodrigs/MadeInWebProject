@@ -1,0 +1,23 @@
+{
+    "git.enable" : false,
+    "files.exclude" : {
+        ".github" : true,
+        "yarn.lock" : true,
+        "node_modules" : true,
+        ".firebase" : true,
+        ".firebaserc" : true,
+        "firebase.json" : true,
+        ".vscode" : false,
+        ".gitignore" : true,
+        "package.json" : true,
+        "package-lock.json" : true,
+        "public" : true,
+        "tsconfig.json" : true,
+        "README.md" : true,
+        "yarn-error.log" : true,
+        ".env" : true,
+        "build" : true,
+        "src/react-app-env.d.ts" : true,
+        "src/index.tsx" : true,
+    }
+}

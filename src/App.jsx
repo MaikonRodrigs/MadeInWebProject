@@ -20,26 +20,26 @@ function App() {
   const toggleTheme = () => {
     setTheme(theme.title === "light" ? dark : light);
   };
-  
+
   const enterTextSearch = (value) => {
     setSearchText(value);
   };
 
   return (
-    
+
     <ThemeProvider theme={theme}>
-      <BrowserRouter>
-        <Header toggleTheme={toggleTheme} />
-        <Switch>
-          <Route exact path="/" render={(Props) => <HomePage enterTextSearch={enterTextSearch} />} />
-          <Route exact path="/results" conponent={ResultsSearch} />
-          <Route path="/video" component={VideoEmbed} />
-        </Switch>
-        <GlobalStyle />
-      </BrowserRouter>
+        <BrowserRouter>
+          <Header toggleTheme={toggleTheme} />
+          <Switch>
+            <Route exact path="/" render={(Props) => <HomePage enterTextSearch={enterTextSearch} />} />
+            <Route exact path="/results" conponent={ResultsSearch} />
+            <Route path="/video/:videoId" component={VideoEmbed} />
+          </Switch>
+          <GlobalStyle />
+        </BrowserRouter>
     </ThemeProvider>
 
-);
+  );
 }
 
 export default App;

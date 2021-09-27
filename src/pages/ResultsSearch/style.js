@@ -14,7 +14,6 @@ export const Container = styled.div`
 
 export const Content = styled.div`
   width: 320px;
-  /* overflow: auto; */
   border: 1px solid ${(props) => props.theme.colors.primary};
   border-radius: 5px;
   display: flex;
@@ -23,7 +22,7 @@ export const Content = styled.div`
   cursor: pointer;
 
   &:hover {
-    border: 1px solid ${(props) => props.theme.colors.text};
+    opacity: 0.7;
   }
 `;
 
@@ -33,10 +32,6 @@ export const Thubmnail = styled.div`
 
   img {
     border-radius: 5px 0 o 5px;
-
-    &:hover {
-      opacity: 0.8;
-    }
   }
 `;
 

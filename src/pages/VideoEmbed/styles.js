@@ -1,5 +1,4 @@
 import styled from "styled-components";
-
 import { Like } from "@styled-icons/evil/Like";
 import { ViewShow } from "@styled-icons/zondicons/ViewShow";
 
@@ -9,6 +8,7 @@ export const Container = styled.div`
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+
   @media (min-width: 1280px) {
     flex-direction: row;
   }
@@ -47,6 +47,7 @@ export const Thumbnail = styled.div`
     }
   }
 `;
+
 export const Description = styled.div`
   padding: 10px 20px;
 
@@ -59,6 +60,7 @@ export const Description = styled.div`
     font-size: var(--lowtext);
   }
 `;
+
 export const Statics = styled.div`
   display: flex;
   justify-content: flex-start;
@@ -94,11 +96,13 @@ export const Likeds = styled.div`
     margin-left: 5px;
   }
 `;
+
 export const IconLiked = styled(ViewShow)`
   width: 20px;
   height: 20px;
   fill: ${(props) => props.theme.colors.primary};
 `;
+
 export const RelatedVideos = styled.div`
   display: flex;
   flex: 1;
@@ -117,6 +121,7 @@ export const LeftColumn = styled.div`
     width: 70%;
   }
 `;
+
 export const RightColumn = styled.div`
   display: flex;
   flex-direction: column;
