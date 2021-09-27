@@ -1,16 +1,13 @@
-👋 Hi, I’m @MaikonRodrigs, hosted this project through Firebase, take a look:
-https://madeinwebtube.web.app/
+👋 <br>Hi, I’m @MaikonRodrigs, hosted this project through Firebase, take a look: <br>
+https://madeinwebtube.web.app/ 
 
-SpecsProject
-# Getting Started with Create React App
-This project [Create React App] @TypeScript
+This project [Create React App] `@TypeScript` <br>
+First run `yarn` next `yarn start`, and **enjoy** 💥
 
-Init Project Local
-### `yarn start`
 
-### Libs Used
-Styled Components
-Styled Icons
-Firebase
-Axios
-React-router-dom
+### Libs
+- [x] Styled Components <br>
+- [x] Styled Icons <br>
+- [x] Firebase <br>
+- [x] Axios <br>
+- [x] React-router-dom <br>
