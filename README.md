@@ -2,8 +2,8 @@
 https://madeinwebtube.web.app/ 
 
 This project [Create React App] `@TypeScript` <br>
-First run `yarn` next `yarn start`, and **enjoy** 💥
-Yeah, don't forget to use dark mode for your best experience.
+First run `yarn` next `yarn start`, and **enjoy** 💥 <br>
+Yeah, don't forget to use dark mode for your best experience. 
 
 **REMEMBER:**
 `SET_YOUR_ID_KEY_YOUTUBE`.env
