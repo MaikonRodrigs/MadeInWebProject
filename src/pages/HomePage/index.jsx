@@ -12,7 +12,10 @@ import {
   ResetSearch,
   Results,
   ShowResults,
-  IconLoading
+  IconLoading,
+  ContainerFooter,
+  GitAvatar,
+  GitUser
 } from './style';
 
 const HomePage = ({ enterTextSearch }) => {
@@ -61,7 +64,7 @@ const HomePage = ({ enterTextSearch }) => {
   }
 
   if (data === '') {
-    return(
+    return (
       <h1>ENVIADO</h1>
     )
   }
@@ -110,8 +113,16 @@ const HomePage = ({ enterTextSearch }) => {
               </div>
             )
           })
-        };
+        }
       </ShowResults>
+      <ContainerFooter>
+        <GitAvatar src="https://github.com/maikonrodrigs.png" />
+        <GitUser>
+          <a href="https://github.com/MaikonRodrigs" target="_blank" rel="noreferrer">
+            https://github.com/MaikonRodrigs
+          </a>
+        </GitUser>
+      </ContainerFooter>
     </>
   )
 }

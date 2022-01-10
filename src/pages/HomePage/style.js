@@ -1,13 +1,10 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-import { Playcanvas } from '@styled-icons/simple-icons/Playcanvas';
-import { Search } from '@styled-icons/ionicons-sharp/Search';
-import { Spinner3 } from '@styled-icons/evil/Spinner3';
-import { CloseCircle } from '@styled-icons/ionicons-solid/CloseCircle';
-import {
-  Rotate,
-  appearFromTop,
-} from "../../utils/animations";
+import { Playcanvas } from "@styled-icons/simple-icons/Playcanvas";
+import { Search } from "@styled-icons/ionicons-sharp/Search";
+import { Spinner3 } from "@styled-icons/evil/Spinner3";
+import { CloseCircle } from "@styled-icons/ionicons-solid/CloseCircle";
+import { Rotate, appearFromTop } from "../../utils/animations";
 
 export const Container = styled.div`
   display: flex;
@@ -157,4 +154,42 @@ export const IconLoading = styled(Spinner3)`
   height: 45px;
   fill: red;
   animation: ${Rotate} 2s linear infinite;
+`;
+
+export const ContainerFooter = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  flex-direction: column;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  @media (max-width: 1024px) {
+    /* display: none; */
+    /* position: relative; */
+  }
+`;
+export const GitAvatar = styled.img`
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  margin-bottom: .5rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  transition: all 0.5s linear;
+  &:hover {
+    width: 5rem;
+    height: 5rem;
+  }
+`;
+export const GitUser = styled.span`
+  a {
+    color: ${(props) => props.theme.colors.text};
+    text-decoration: none;
+    font-size: .8rem;
+    &:hover {
+      color: ${(props) => props.theme.colors.text_secondary};
+    }
+  }
 `;
